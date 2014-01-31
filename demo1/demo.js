@@ -34,11 +34,11 @@
 		object.div.style.left = Math.floor(object.x) + 'px';
 	};
 
-	var tick = function(){
+	var tick = function(timestamp){
 		// Animation call
 		render();
-		setTimeout(tick,10);
+		requestAnimationFrame(tick);
 	};
 
-	tick();
+    requestAnimationFrame(tick);
 })();

@@ -112,16 +112,16 @@ MyDemo.spawnDiv = function (startX, startY, color) {
 //         var scaleX = Math.abs(newX - mousePos.x) / 200;
 //         newDiv.style.height = (height * scaleY + 3) + 'px';
 //         newDiv.style.width = (width * scaleX + 3) + 'px';
-        animationTimer = setTimeout(function() {
+        requestAnimationFrame(function() {
             if(newDiv){
                 stepAhead();
             }
-        }, 10);
+        });
     }
-    
-    var animationTimer = setTimeout(function() {
+
+    document.body.appendChild(newDiv);
+    requestAnimationFrame(function() {
         stepAhead();
         newDiv.style.display = 'block';
-    }, 10);
-    document.body.appendChild(newDiv);   
+    });
 }

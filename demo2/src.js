@@ -98,13 +98,21 @@
         wanderA[i] = new Wanderer(parseInt(windowWidth/2), parseInt(windowHeight/2));
     }
 
-    function update() {
-    for(var i = 0; i < actorCount; i++){
-        wanderA[i].update();
-    }
-        setTimeout(update, 500);
+    var start = null;
+    function update(timestamp) {
+        var progress = timestamp - start;
+
+        if (start === null || progress > 500) {
+            for(var i = 0; i < actorCount; i++){
+                wanderA[i].update();
+            }
+
+            start = timestamp;
+        }
+
+        requestAnimationFrame(update);
     }
 
-    update();
+    requestAnimationFrame(update);
 
 })();

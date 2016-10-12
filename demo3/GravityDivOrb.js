@@ -22,10 +22,10 @@ var divCount = 0;
 	} 
 	
 var startSpawn = function(){
-divCount++;
-console.log('divCount: ' + divCount);
-var centerX = mousePos.x;
-var centerY = mousePos.y;
+    divCount++;
+    console.log('divCount: ' + divCount);
+    var centerX = mousePos.x;
+    var centerY = mousePos.y;
 
     MyDemo.spawnDiv(centerX, centerY, randomColor());
     function randomColor() {

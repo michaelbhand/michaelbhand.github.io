@@ -27,7 +27,6 @@ console.log('divCount: ' + divCount);
 var centerX = mousePos.x;
 var centerY = mousePos.y;
 
-// console.log('mousePos.x:' + mousePos.x);
     MyDemo.spawnDiv(centerX, centerY, randomColor());
     function randomColor() {
         return 'rgb(' + getColor() + ',' + getColor() + ',' + getColor() + ')';

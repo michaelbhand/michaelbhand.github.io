@@ -5,12 +5,9 @@ var divCount = 0;
 	function mouseMove(ev){ 
 	    ev           = ev || window.event; 
 	    mousePos = mouseCoords(ev);
-// 	    alert('mousePos.x: ' + mousePos.x:);
 	    if(divCount < 100){
             startSpawn();
             startSpawn();
-//             startSpawn();
-//             startSpawn();
 	    }
 	} 
 	 
@@ -45,13 +42,6 @@ MyDemo = {};
 MyDemo.spawnDiv = function (startX, startY, color) {
     var width = (Math.random() * 50) || 1,
         height = width;
-//         height = (Math.random() * 50) || 1;
-
-//     var width = 50,
-//         height = 50;
-
-
-
     var divLoc = {};
     divLoc.x = startX; 
     divLoc.y = startY;
@@ -107,11 +97,6 @@ MyDemo.spawnDiv = function (startX, startY, color) {
         divLoc.y = newY;
         newDiv.style.left = Math.floor(divLoc.x) + 'px';
         newDiv.style.top = Math.floor(divLoc.y) + 'px';
-//         newDiv.style.webkitTransform = 'rotate(' + (newX + newY) + 'deg)';
-//         var scaleY = Math.abs(newY - mousePos.y) / 200;
-//         var scaleX = Math.abs(newX - mousePos.x) / 200;
-//         newDiv.style.height = (height * scaleY + 3) + 'px';
-//         newDiv.style.width = (width * scaleX + 3) + 'px';
         animationTimer = setTimeout(function() {
             if(newDiv){
                 stepAhead();
